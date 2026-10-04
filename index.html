@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clinic Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Smart Clinic Management System</h1>
+        <p>Healthcare Management Portal</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('adminLogin')">Admin</button>
+        <button onclick="showPage('doctorLogin')">Doctor</button>
+        <button onclick="showPage('patientLogin')">Patient</button>
+    </nav>
+
+    <!-- Q13: Admin Login -->
+    <section id="adminLogin" class="page">
+        <div class="card login-card">
+            <h2>Admin Login</h2>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter admin email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter password">
+
+            <button class="primary" onclick="adminLogin()">Login</button>
+
+            <p id="adminMessage"></p>
+        </div>
+    </section>
+
+    <!-- Q14: Doctor Login -->
+    <section id="doctorLogin" class="page hidden">
+        <div class="card login-card">
+            <h2>Doctor Login</h2>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter doctor email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter password">
+
+            <button class="primary" onclick="doctorLogin()">Login</button>
+
+            <p id="doctorMessage"></p>
+        </div>
+    </section>
+
+    <!-- Q15: Patient Login -->
+    <section id="patientLogin" class="page hidden">
+        <div class="card login-card">
+            <h2>Patient Login</h2>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter patient email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter password">
+
+            <button class="primary" onclick="patientLogin()">Login</button>
+
+            <p id="patientMessage"></p>
+        </div>
+    </section>
+
+    <!-- Q16: Admin Add Doctor -->
+    <section id="adminPortal" class="page hidden">
+        <div class="card">
+            <h2>Admin Portal</h2>
+            <h3>Add Doctor</h3>
+
+            <input id="doctorName" placeholder="Doctor Name">
+            <input id="doctorEmail" placeholder="Doctor Email">
+            <input id="doctorSpeciality" placeholder="Speciality">
+            <input id="doctorPhone" placeholder="Phone Number">
+
+            <button class="primary" onclick="addDoctor()">
+                Add Doctor
+            </button>
+
+            <p id="addDoctorMessage"></p>
+        </div>
+    </section>
+
+    <!-- Q17: Patient Search Doctor -->
+    <section id="patientPortal" class="page hidden">
+        <div class="card">
+            <h2>Patient Portal</h2>
+            <h3>Search Doctor</h3>
+
+            <input id="searchDoctor"
+                   placeholder="Enter doctor name">
+
+            <button class="primary" onclick="searchDoctor()">
+                Search
+            </button>
+
+            <div id="doctorResult"></div>
+        </div>
+    </section>
+
+    <!-- Q18: Doctor Appointments -->
+    <section id="doctorPortal" class="page hidden">
+        <div class="card">
+            <h2>Doctor Portal</h2>
+            <h3>My Patient Appointments</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Rahul Sharma</td>
+                        <td>2026-10-06</td>
+                        <td>10:00 AM</td>
+                        <td>Booked</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya Singh</td>
+                        <td>2026-10-06</td>
+                        <td>11:30 AM</td>
+                        <td>Booked</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amit Kumar</td>
+                        <td>2026-10-07</td>
+                        <td>02:00 PM</td>
+                        <td>Booked</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
